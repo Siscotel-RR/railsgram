@@ -1,0 +1,7 @@
+<div class="card">
+    <div class="card-body">
+        <%= image.description %>
+        <%= link_to "Editar", edit_image_path(image) %>
+        <%= link_to "Eliminar", image, method: :delete, data: { confirm: "Estas seguro?" } %>
+    </div>
+</div>
