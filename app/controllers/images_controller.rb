@@ -1,7 +1,8 @@
 class ImagesController < ApplicationController
     before_action :set_image, only: [:show, :edit, :update, :destroy]
     def index
-        @images = Image.all
+        @images = Image.all.order('created_at DESC')
+        @image = Image.new
     end
 
     def new
@@ -10,7 +11,7 @@ class ImagesController < ApplicationController
 
     def create
         # render plain: params[:image].inspect
-        @image = Image.new image_params
+        @image = Image.create(image_params) 
         if @image.save
             redirect_to images_path
         else
@@ -25,7 +26,7 @@ class ImagesController < ApplicationController
     end
 
     def update
-        if @image.update image_params
+        if @image.update(image_params)
             redirect_to images_path
         else
             render edit
