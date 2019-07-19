@@ -13,7 +13,7 @@ class ImagesController < ApplicationController
         # render plain: params[:image].inspect
         @image = Image.create(image_params) 
         if @image.save
-            redirect_to images_path
+            redirect_to root_path
         else
             render new
         end
@@ -27,7 +27,7 @@ class ImagesController < ApplicationController
 
     def update
         if @image.update(image_params)
-            redirect_to images_path
+            redirect_to root_path
         else
             render edit
         end

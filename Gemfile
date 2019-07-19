@@ -38,7 +38,7 @@ gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 # MINI MAGICK
 gem 'mini_magick', '~> 4.8'
 # DEVISE
-# gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 # ACTION CABLE
 # gem 'actioncable', '~> 5.2', '>= 5.2.3'
 # MATERIALIZE
