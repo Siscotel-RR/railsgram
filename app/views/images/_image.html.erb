@@ -1,0 +1,10 @@
+<div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+        <%= image_tag image.picture.medium.url, class: "card-img rounded" %>
+        <div class="card-body">
+            <p class="card-text"><%= image.description %></p>
+            <%= link_to "Editar", edit_image_path(image), class: "btn btn-primary" %>
+            <%= link_to "Eliminar", image, method: :delete, data: { confirm: "Estas seguro?" }, class: "btn btn-danger" %>
+        </div>
+    </div>
+</div>
