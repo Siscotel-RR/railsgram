@@ -3,9 +3,31 @@
     <div class="card" >
         <%= image_tag image.picture.medium.url, class: "card-img rounded" %>
         <div class="card-body">
-            <p class="card-text"><%= image.description %></p>
-            <%= link_to "Editar", edit_image_path(image), class: "btn btn-primary" %>
-            <%= link_to "Eliminar", image, method: :delete, data: { confirm: "Estas seguro?" }, class: "btn btn-danger" %>
+            <div class="row">
+                <div class="col-md-11 col-sm-11 col-xs-10">
+                    <%= image.description %>
+                </div>
+                <div class="col-md-1 col-sm-1 col-xs-1">
+                    <!-- <div class="btn-group dropup">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones</a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <%= link_to "Editar", edit_image_path(image), class: "dropdown-item" %>
+                            <%= link_to "Eliminar", image, method: :delete, data: { confirm: "Estas seguro?" }, class: "dropdown-item" %>
+                        </div>
+                    </div> -->
+                    <div class="btn-group ">
+                        <div class="btn-group dropleft d-flex ml-auto pull-right" role="group">
+                            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="sr-only">Toggle Dropleft</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <%= link_to "Editar", edit_image_path(image), class: "dropdown-item" %>
+                                <%= link_to "Eliminar", image, method: :delete, data: { confirm: "Estas seguro?" }, class: "dropdown-item" %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <br />

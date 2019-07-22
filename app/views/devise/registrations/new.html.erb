@@ -18,16 +18,23 @@
           </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="col-md-7 col-sm-8 col-xs-12">
               <div class="form-group">
-                <%= f.email_field :email, autocomplete: "email", placeholder: "Correo", class: "form-control" %>
+                <%= f.text_field :username, autocomplete: "username", placeholder: "Nombre de Usuario", class: "form-control" %>
               </div>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="col-md-5 col-sm-4 col-xs-12">
               <div class="form-group">
                 <%= f.date_field :birthday, autocomplete: "birthday", placeholder: "Fecha de Nacimiento", class: "form-control" %>
               </div>
             </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 col-sm 12-col-xs 12">
+            <div class="form-group">
+              <%= f.email_field :email, autocomplete: "email", placeholder: "Correo Electronico", class: "form-control" %>
+            </div>
+          </div>
         </div>
         <div class="row">
             <div class="col-md-6 col-sm-6col-xs-12">
