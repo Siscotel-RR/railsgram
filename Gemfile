@@ -34,7 +34,7 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 # JQUERY
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 # CARRIERWAVE
-gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'carrierwave', '~> 1.3'
 # MINI MAGICK
 gem 'mini_magick', '~> 4.8'
 # DEVISE
